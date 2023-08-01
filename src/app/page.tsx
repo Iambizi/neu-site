@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, useTexture } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
 import * as THREE from 'three';
-import  WIP  from './components/WIP';
+import  WIP  from './WIP';
 
 
 type ModelProps = {

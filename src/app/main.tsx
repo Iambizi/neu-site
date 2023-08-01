@@ -4,7 +4,7 @@ import { useGLTF, OrbitControls, Environment, useTexture } from '@react-three/dr
 import { useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import './App.css';
-import  WIP  from './components/WIP';
+import  WIP  from './WIP';
 
 type ModelProps = {
   setHovered: (hovered: boolean) => void;
