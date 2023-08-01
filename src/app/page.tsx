@@ -61,7 +61,7 @@ const App: FC = () => {
         <pointLight position={[10, 10, 10]} />
         <WIP setHovered={setHovered} />
         <OrbitControls autoRotate autoRotateSpeed={isHovered ? 0.15 : 1} minDistance={1} maxDistance={4} target={[0, 0, 0]} />
-        <Environment preset="apartment" background />
+        <Environment preset="forest" background />
         {/* <MyEnvironment path="/HDRI/AdobeStock_Galaxy.jpeg" /> */}
       </Canvas>
       {/* <div className="App-logo-container">
