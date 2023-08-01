@@ -11,7 +11,7 @@ export function WIP({ setHovered }) { // Include setHovered in the props
   return (
     <group
       dispose={null}
-      position={[0.12, 0.0, 0]} // Centered position
+      position={[0.125, 0.04, 0]} // Centered position
       scale={0.4} // Scale the entire group
       onPointerOver={() => setHovered(true)} // Add onPointerOver handler
       onPointerOut={() => setHovered(false)} // Add onPointerOut handler

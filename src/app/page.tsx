@@ -1,35 +1,29 @@
 'use client'
 import React, { useState, FC } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { useGLTF, OrbitControls, Environment, useTexture } from '@react-three/drei';
+import { OrbitControls, Environment, useTexture } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import  WIP  from './components/WIP';
-import styles from './page.module.css'
 
 
 type ModelProps = {
   setHovered: (hovered: boolean) => void;
 };
 
-// const Model: FC<ModelProps> = ({ setHovered }) => {
-//   const gltf = useGLTF('/WIP.glb', false);
-//   return (
-//     <primitive
-//       object={gltf.scene}
-//       position={[0, 0, 0]}
-//       scale={0.25}
-//       onPointerOver={() => setHovered(true)}
-//       onPointerOut={() => setHovered(false)}
-//       onTouchStart={() => setHovered(true)}
-//       onTouchEnd={() => setHovered(false)}
-//     />
-//   );
-// };
-
 type MyEnvironmentProps = {
   path: string;
 };
+
+// 'city'
+// 'apartment'
+// 'studio'
+// 'sunset'
+// 'dawn'
+// 'night'
+// 'warehouse'
+// 'forest'
+// 'lobbies'
 
 const MyEnvironment: FC<MyEnvironmentProps> = ({ path }) => {
   const { gl, scene } = useThree();
@@ -65,16 +59,15 @@ const App: FC = () => {
       <Canvas style={{ display: 'block', margin: '0 auto' }} camera={{ position: [0, 0, 2], fov: 40 }}>
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
-        {/* <Model setHovered={setHovered} /> */}
         <WIP setHovered={setHovered} />
-        <OrbitControls autoRotate autoRotateSpeed={isHovered ? 0.15 : 1} minDistance={1} maxDistance={5} target={[0, 0, 0]} />
-        <Environment preset="dawn" background />
+        <OrbitControls autoRotate autoRotateSpeed={isHovered ? 0.15 : 1} minDistance={1} maxDistance={4} target={[0, 0, 0]} />
+        <Environment preset="apartment" background />
         {/* <MyEnvironment path="/HDRI/AdobeStock_Galaxy.jpeg" /> */}
       </Canvas>
-      <div className="App-logo-container">
+      {/* <div className="App-logo-container">
         <img src="./assets/3D_Asset.png" alt="Logo" className="App-logo-img" />
-        {/* <img src={logo} alt="Logo" /> */}
-      </div>
+        <img src={logo} alt="Logo" />
+      </div> */}
     </div>
   );
 };
