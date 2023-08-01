@@ -70,7 +70,6 @@ const App: FC = () => {
       </Canvas>
       <div className="App-logo-container">
         <img src="./assets/3D_Asset.png" alt="Logo" className="App-logo-img" />
-        {/* <img src={logo} alt="Logo" /> */}
       </div>
     </div>
   );
